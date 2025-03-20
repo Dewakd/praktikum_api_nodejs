@@ -112,6 +112,19 @@ paths:
   /user:
     post:
       description: 'endpoint untuk menambahkan data user'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                age:
+                  type: integer
       responses: 
         '200':
           description: Tambah data user berhasil
