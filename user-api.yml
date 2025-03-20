@@ -85,21 +85,18 @@ paths:
           required: true
           schema:
             type: integer
-        - name: name
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: email
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: age
-          in: query
-          required: true
-          schema:
-            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                age:
+                  type: integer
       responses:
         '200':
           description: Ubah data berhasil
